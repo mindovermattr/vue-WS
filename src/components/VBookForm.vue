@@ -2,11 +2,11 @@
   <form @submit.prevent="handleSumbit($event)" class="form" action="#">
     <fieldset class="form__fields">
       <legend>Введите данные книги</legend>
-      <input v-model="formData.title" placeholder="Имя книги" type="text" />
-      <input v-model="formData.author" placeholder="Автор книги" type="text" />
-      <input v-model="formData.rate" placeholder="Рейтинг книги" type="text" />
+      <input class="form__field" v-model="formData.title" placeholder="Имя книги" type="text" />
+      <input class="form__field" v-model="formData.author" placeholder="Автор книги" type="text" />
+      <input class="form__field" v-model="formData.rate" placeholder="Рейтинг книги" type="text" />
     </fieldset>
-    <button>Добавить</button>
+    <button class="form__button">Добавить</button>
   </form>
 </template>
 
@@ -30,13 +30,27 @@ const handleSumbit = (event) => {
 .form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: flex-start;
+
   padding: 24px 12px;
+  gap: 12px;
+  margin-top: 103px;
+  border: 1px solid gray;
 }
 .form__fields {
   display: flex;
   gap: 10px;
   padding: 10px 20px;
   flex-direction: column;
+}
+.form__field {
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+.form__button {
+  background-color: forestgreen;
+  padding: 8px 12px;
+  color: white;
+  cursor: pointer;
 }
 </style>
