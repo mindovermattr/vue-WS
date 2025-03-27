@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { getBooks } from "@/api/books.api";
+import { addBook as addBookApi, getBooks } from "@/api/books.api";
 import VBookList from "@/components/VBookList.vue";
 import { onMounted, ref, watchEffect } from "vue";
 
@@ -31,7 +31,8 @@ watchEffect(async () => {
 });
 
 const addBook = (event, formData) => {
-  books.value.push({ ...formData });
+  console.log(formData);
+  addBookApi({ ...formData });
 };
 
 const prevPage = () => {

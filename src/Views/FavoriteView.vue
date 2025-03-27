@@ -6,13 +6,14 @@
 </template>
 
 <script setup>
-import { getFavoriteBooks } from "@/api/books.api";
+import { addBook as addBookApi, getFavoriteBooks } from "@/api/books.api";
 import VBookList from "@/components/VBookList.vue";
 import { onMounted, ref } from "vue";
 
 const favoriteBooks = ref([]);
 
 const addBook = (event, formData) => {
+  addBookApi({ ...formData });
   favoriteBooks.value.push({ ...formData });
 };
 
@@ -22,7 +23,7 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.title{
-    margin-top: 24px;
+.title {
+  margin-top: 24px;
 }
 </style>

@@ -13,7 +13,7 @@ defineEmits(["addBook"]);
     <div class="list">
       <VBookCard v-for="book in books" v-bind="book" v-bind:key="book.id" />
     </div>
-    <VBookForm @addBook="$emit(addBook)" />
+    <VBookForm @addBook="(event, payload) => $emit('addBook', event, payload)" />
   </div>
 </template>
 
