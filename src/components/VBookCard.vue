@@ -18,7 +18,7 @@ defineProps({
     required: true,
   },
   rate: {
-    type: String,
+    type: Number,
     required: true,
   },
 });
@@ -27,6 +27,7 @@ defineProps({
 <style scoped>
 .list__item {
   display: flex;
+  max-width: 260px;
   flex-direction: column;
   gap: 12px;
   border: 1px solid black;

@@ -34,7 +34,6 @@ const handleSumbit = (event) => {
 
   padding: 24px 12px;
   gap: 12px;
-  margin-top: 103px;
   border: 1px solid gray;
 }
 .form__fields {

@@ -1,9 +1,14 @@
-import { createMemoryHistory, createRouter } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
+import FavoriteView from "./Views/FavoriteView.vue";
 import MainView from "./Views/MainView.vue";
 
-const routes = [{ path: "/", component: MainView }];
-
 export const router = createRouter({
-  history: createMemoryHistory(),
-  routes,
+  history: createWebHistory(),
+  routes: [
+    { path: "/", component: MainView },
+    {
+      path: "/favorites",
+      component: FavoriteView,
+    },
+  ],
 });
