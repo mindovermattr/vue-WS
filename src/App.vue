@@ -1,12 +1,13 @@
 <script setup>
 import { RouterView } from "vue-router";
-import "./assets/main.css";
 import VHeader from "./components/VHeader.vue";
+import ThemeContext from "./Context/themeContext.vue";
 </script>
 
 <template>
-  <VHeader />
-  <RouterView />
+  <ThemeContext>
+    <RouterView />
+  </ThemeContext>
 </template>
 
 <style scoped></style>

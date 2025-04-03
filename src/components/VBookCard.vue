@@ -30,7 +30,8 @@ defineProps({
   max-width: 260px;
   flex-direction: column;
   gap: 12px;
-  border: 1px solid black;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
   border-radius: 12px;
   padding: 28px;
 }

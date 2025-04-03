@@ -35,6 +35,7 @@ const handleSumbit = (event) => {
   padding: 24px 12px;
   gap: 12px;
   border: 1px solid gray;
+  background-color: var(--bg-color);
 }
 .form__fields {
   display: flex;
@@ -47,7 +48,7 @@ const handleSumbit = (event) => {
   border-radius: 12px;
 }
 .form__button {
-  background-color: forestgreen;
+  background-color: var(--header-color);
   padding: 8px 12px;
   color: white;
   cursor: pointer;

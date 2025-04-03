@@ -6,7 +6,29 @@
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+
+button{
+    background: none;
+border: none;
+cursor: pointer;
+}
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
 }
+
+:root{
+    --bg-color: #fff;
+    --text-color: #000;
+    --header-color: forestgreen;
+    --text-header-color: #fff
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+     --header-color: gray;
+     --text-header-color: #f0f0f0;
+  }

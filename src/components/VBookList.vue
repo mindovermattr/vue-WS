@@ -27,5 +27,6 @@ defineEmits(["addBook"]);
   display: flex;
   flex-wrap: wrap;
   gap: 48px;
+  align-items: flex-start;
 }
 </style>
