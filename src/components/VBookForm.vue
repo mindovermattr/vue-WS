@@ -16,7 +16,7 @@ import { reactive } from "vue";
 const formData = reactive({
   title: "",
   author: "",
-  rate: "",
+  rate: 0,
 });
 
 const emit = defineEmits(["addBook"]);

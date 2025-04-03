@@ -1,5 +1,5 @@
-export const getBooks = async (page, limit) => {
-  const resp = await fetch(`http://localhost:3000/books?_page=${page}&_per_page=${limit}`);
+export const getBooks = async () => {
+  const resp = await fetch(`http://localhost:3000/books`);
   const data = await resp.json();
   return data;
 };
